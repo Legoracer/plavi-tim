@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Button, Image } from "react-native"
 //import NavigationController from "../controllers/NavigationController";
 import { useEffect, useState } from "react";
+import React from "react";
 
 const style = StyleSheet.create({
     background: {

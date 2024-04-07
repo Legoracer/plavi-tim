@@ -40,7 +40,7 @@ if (isLoading) {
 								tabBarIcon: ()=>{
 									return (
 									  <View style={{alignItems: "center", justifyContent: "center"}}> 
-									<FontAwesome name="location-arrow" size={24} color="white" />
+										<FontAwesome name="location-arrow" size={24} color="white" />
 										<Text style={{fontSize: 12, color: "white"}}>LOCATIONS</Text>
 								  </View>
 									)
