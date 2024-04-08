@@ -4,11 +4,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import SplashView from './src/screens/splash';
 import LocationSelectorView from './src/screens/locationSelector';
-import CameraView from './src/screens/camera';
+// import CameraView from './src/screens/camera';
 import MainMenuView from './src/screens/mainMenu';
 import { FontAwesome } from '@expo/vector-icons';
 import { View, Text } from 'react-native';
-
+import ManualEntryView from './src/screens/manualEntry';
+import TabIcon from './src/controllers/tabIcon';
 
 export default function App() {
 	const [isLoading, setIsLoading] = useState(true);
@@ -37,26 +38,18 @@ if (isLoading) {
 				<Tab.Screen name="Locations" 
 							component={LocationSelectorView} 
 							options= {{
-								tabBarIcon: ()=>{
-									return (
-									  <View style={{alignItems: "center", justifyContent: "center"}}> 
-										<FontAwesome name="location-arrow" size={24} color="white" />
-										<Text style={{fontSize: 12, color: "white"}}>LOCATIONS</Text>
-								  </View>
-									)
-								  }
+								tabBarIcon: ()=> <TabIcon iconName="location-arrow" text="LOCATIONS" />
+									
 							}}
 							/>
-				<Tab.Screen name="Camera" component={CameraView}
+				<Tab.Screen name="Camera" component={MainMenuView}
 				options= {{
-						tabBarIcon: ()=>{
-							return (
-							  <View style={{alignItems: "center", justifyContent: "center"}}> 
-							 <FontAwesome name="camera" size={24} color="white" />
-								<Text style={{fontSize: 12, color: "white"}}>CAMERA</Text>
-						  </View>
-							)
-						  }
+						tabBarIcon: ()=> <TabIcon iconName="camera" text="CAMERA" />
+					}} />
+					<Tab.Screen name="ManualEntry" component={ManualEntryView}
+				options= {{
+						tabBarIcon: ()=> <TabIcon iconName="pencil-square-o" text="MANUAL ENTRY" />
+
 					}} />
 			</Tab.Navigator>
 		</NavigationContainer>

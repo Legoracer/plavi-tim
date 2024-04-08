@@ -1,40 +1,21 @@
 import React from "react";
 import { useState } from "react";
-import { Text, TextInput, View, StyleSheet, Button, FlatList, TouchableOpacity } from "react-native"
-import { SelectList } from 'react-native-dropdown-select-list'
+import { Text, View, StyleSheet, FlatList, TouchableOpacity } from "react-native"
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const style = StyleSheet.create({
-    background: {
-        flexDirection: "column",
-        justifyContent: "center",
-        paddingTop: 50,
-    },
-
-    input: {
-        color: "red",
-        borderRadius: 8,
-        borderColor: "rgba(0, 0, 0, .5)",
-        height: 40,
-        margin: 12,
-        borderWidth: 1,
-    },
-
     title: {
         fontSize: 24,
-        paddingLeft: 16
+        backgroundColor: '#00639C',
+        color: 'white',
+        paddingTop: 15,
+        paddingLeft: 5
     },
-
-    dropdown_input: {
-        padding: 0,
-        margin: 0,
-    },
-
     list: {
         borderWidth: 1,
         borderTopColor: '#E6E7E8',
         borderBottomColor: '#E6E7E8',
         borderRightColor: '#E6E7E8',
-        marginBottom: 'auto'
     },
 
     location: {
@@ -62,23 +43,17 @@ function renderSeparator() {
     );
   };
 
-function Location({navigation}) {
+function Location({navigation, location}) {
     return (
-        <TouchableOpacity style={style.location} onPress={()=>{navigation.navigate("MainMenu")}}>
-            <Text>Example Location</Text>
+        <TouchableOpacity style={style.location} onPress={()=>{
+            navigation.navigate("MainMenu")}}>
+            <Text>{location}</Text>
         </TouchableOpacity>
-    )
-}
-
-function Separator() {
-    return (
-        <View style={style.separator}/>
     )
 }
 
 export default function LocationSelectorView({ navigation }) {
     const [selected, setSelected] = useState("");
-    const [email, setEmail] = useState("")
 
     const data = [
         { key: '1', value: 'Mobiles', disabled: true },
@@ -117,9 +92,9 @@ export default function LocationSelectorView({ navigation }) {
     { key: '34', value: 'Car Accessories' }
     ]
     return (
-        <View style={style.background}>
-            <Text style={style.title}>Select a location:</Text>
-            <FlatList data={data} renderItem={(item) => <Location navigation={navigation}/>} style={style.list} ItemSeparatorComponent={renderSeparator}/>
-        </View>
+        <SafeAreaView>
+            <Text style={style.title}>Select a location: {selected} </Text>
+            <FlatList data={data} renderItem={({ item }) => <Location  navigation={navigation} location={item.value}/>} style={style.list} ItemSeparatorComponent={renderSeparator}/>
+        </SafeAreaView>
     )
 }
