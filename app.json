@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "PlaviTimReact",
+    "name": "INA-InventoryApp",
     "slug": "PlaviTimReact",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -24,7 +24,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.rit.plavitim",
+      "bundleIdentifier": "hr.ina.rit-inventory",
       "infoPlist": {
         "NSCameraUsageDescription": "$(PRODUCT_NAME) needs access to your Camera."
       }
@@ -37,10 +37,16 @@
       "permissions": [
         "android.permission.CAMERA"
       ],
-      "package": "com.rit.plavitim"
+      "package": "hr.ina.rit-inventory"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7c3bc1b0-877c-42f5-9217-71af6a2097da"
+      }
+    },
+    "owner": "maxiv54"
   }
 }
