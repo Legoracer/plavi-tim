@@ -76,5 +76,12 @@
 	<string>Light</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>calibri-bold-italic.ttf</string>
+		<string>calibri-bold.ttf</string>
+		<string>calibri-italic.ttf</string>
+		<string>Calibri.ttf</string>
+	</array>
 </dict>
 </plist>
