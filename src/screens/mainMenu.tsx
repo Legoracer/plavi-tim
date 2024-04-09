@@ -49,10 +49,10 @@ export default function MainMenuView({ navigation }) {
         <View style={style.background}>
             <View style={style.vstack}>
                 <View style={style.hstack}>
-                    <TouchableOpacity style={style.item} onPress={()=>{navigation.navigate("Camera")}}>
+                    {/* <TouchableOpacity style={style.item} onPress={()=>{navigation.navigate("Camera")}}>
                         <View style={style.itemImage} />
                         <Text style={style.itemText}>Scan</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                     <TouchableOpacity style={style.item} onPress={()=>{navigation.navigate("LocationSelector")}}>
                         <View style={style.itemImage} />
                         <Text style={style.itemText}>Location</Text>
