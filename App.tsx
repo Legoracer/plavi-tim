@@ -35,13 +35,6 @@ if (isLoading) {
 			headerShown: false,
 			tabBarShowLabel: false,
 		}}>		
-				<Tab.Screen name="Locations" 
-							component={LocationSelectorView} 
-							options= {{
-								tabBarIcon: ()=> <TabIcon iconName="location-arrow" text="LOCATIONS" />
-									
-							}}
-							/>
 				<Tab.Screen name="Camera" component={MainMenuView}
 				options= {{
 						tabBarIcon: ()=> <TabIcon iconName="camera" text="CAMERA" />
