@@ -65,9 +65,10 @@ export default InputText;
 const styles = StyleSheet.create({
     text: {
       borderColor: 'black',
-      borderWidth: 2,
+      borderWidth: 1,
       width: '80%',
       height: 50,
+      padding: 10
         },
     focused: {
         borderColor: '#00639C'

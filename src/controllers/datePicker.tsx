@@ -30,7 +30,9 @@ const DatePicker = () => {
           <DateTimePickerModal
           date={selectedDate}
           isVisible={isDatePickerVisible}
-          mode="date"
+          display="spinner"
+
+          mode='date'
           onConfirm={handleConfirm}
           onCancel={hideDatePicker}
           textColor="black"

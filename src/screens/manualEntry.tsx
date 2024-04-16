@@ -10,18 +10,14 @@ export default function ManualEntryView() {
         body: {
           flex: 1,
           flexDirection: 'column',
-          justifyContent: 'space-between',
+          justifyContent: 'space-evenly',
           margin: 20,
         }
       });
     return (
         <SafeAreaView style={styles.body}>
-        <View style={{padding: 20}}>
       <InputText/>
-      </View>
-      <View style={{padding: 20}}>
       <DropdownComponent/>
-      </View>
 
       <View style={{ alignItems: 'center',
     justifyContent: 'center',}}>

@@ -10,6 +10,7 @@ import { FontAwesome } from '@expo/vector-icons';
 import { View, Text } from 'react-native';
 import ManualEntryView from './src/screens/manualEntry';
 import TabIcon from './src/controllers/tabIcon';
+import CameraView from './src/screens/camera';
 
 export default function App() {
 	const [isLoading, setIsLoading] = useState(true);
@@ -35,7 +36,7 @@ if (isLoading) {
 			headerShown: false,
 			tabBarShowLabel: false,
 		}}>		
-				<Tab.Screen name="Camera" component={MainMenuView}
+				<Tab.Screen name="Camera" component={CameraView}
 				options= {{
 						tabBarIcon: ()=> <TabIcon iconName="camera" text="CAMERA" />
 					}} />
